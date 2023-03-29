@@ -5,6 +5,12 @@ describe("pow", function() {
         assert.equal(pow(x, 3), expected);
         });
     }
+    it("для отрицательных n возвращает NaN", function() {
+        assert.isNaN(pow(2, -1));
+        });
+    it("для дробных n возвращает NaN", function() {
+    assert.isNaN(pow(2, 1.5));
+        });
     for (let x = 1; x <= 5; x++) {
         makeTest(x);
         }
